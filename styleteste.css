@@ -91,6 +91,35 @@ button {
   z-index: 10;
 }
 
+.sidebar-controls {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: .65rem;
+}
+
+.language-select {
+  min-height: 38px;
+  padding: .4rem .5rem;
+  border: 1px solid var(--grey-light);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  color-scheme: dark;
+  font: inherit;
+  font-size: .78rem;
+  cursor: pointer;
+}
+
+.language-select:focus-visible {
+  outline: 2px solid var(--acento-light);
+  outline-offset: 2px;
+}
+
+.filtros {
+  flex-wrap: wrap;
+}
+
 #conteudo-principal {
   flex: 1;
   display: flex;
@@ -645,12 +674,17 @@ button.skill-tag {
     object-position: center top;
   }
 
-  .btn-cv {
+  .sidebar-controls {
     grid-column: 2;
     grid-row: 1;
-    width: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .btn-cv {
+    width: auto;
     min-height: 38px;
-    justify-self: end;
     padding: .55rem .8rem;
   }
 
