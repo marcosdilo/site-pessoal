@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Marcos Sousa, Desenvolvedor Front-end, focado em tecnologia e evolução contínua." data-i18n="description" data-i18n-attribute="content">
+  <meta name="description" content="Portfólio de Marcos Sousa, desenvolvedor full-stack com foco em aplicações web, automação de processos e integração de IA." data-i18n="description" data-i18n-attribute="content">
   <title data-i18n="pageTitle">Marcos Sousa — Portfólio</title>
   <link rel="stylesheet" href="styleteste.css">
 </head>
@@ -37,6 +37,7 @@
       <a href="#sobre" title="Sobre" data-i18n="navAbout" data-i18n-attribute="title"><i class="bi bi-person"></i></a>
       <a href="https://wa.me/5521982749158" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
       <a href="https://github.com/marcosdilo" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+      <a href="mailto:marcos.sousadilo@gmail.com" title="E-mail" data-i18n="emailLabel" data-i18n-attribute="title"><i class="bi bi-envelope" aria-hidden="true"></i></a>
     </nav>
   </aside>
 
@@ -54,7 +55,9 @@
         <div class="post-buttons"><i class="bi bi-three-dots"></i></div>
       </div>
       <div class="post-content">
-        <p data-i18n="intro" data-i18n-html>Olá! Meu nome é <strong style="color:white">Marcos Filipe Santos de Sousa</strong>, tenho 20 anos e sou natural de João Pessoa. Sou um desenvolvedor apaixonado por tecnologia e movido por uma busca implacável por evolução contínua.</p>
+        <h1 class="profile-role" data-i18n="role">Desenvolvedor full-stack</h1>
+        <p data-i18n="intro" data-i18n-html>Sou <strong>Marcos Filipe Santos de Sousa</strong>, desenvolvedor freelancer e estudante de Ciência da Computação na Universidade Veiga de Almeida. Moro em Nova Iguaçu, no Rio de Janeiro, e desenvolvo aplicações web e automações de processos com IA.</p>
+        <p data-i18n="availability">Busco oportunidades de estágio ou de desenvolvedor júnior.</p>
         
         <h3 data-i18n="athleteHeading">De Atleta a Desenvolvedor</h3>
         <p data-i18n="athletePast">Antes de mergulhar no universo dos códigos, atuei como atleta profissional. O esporte me ensinou que o sucesso é fruto de foco, resiliência e repetição.</p>
@@ -69,7 +72,7 @@
     <section id="projetos" class="page-section hidden-scroll">
       <div class="post-actions">
         <div class="link"><i class="bi bi-folder-fill"></i></div>
-        <div class="fecha" data-i18n="projectsSection">projetos · meus repositórios</div>
+        <div class="fecha" data-i18n="projectsSection">projetos · GitHub e trabalhos</div>
         <div class="post-buttons"><i class="bi bi-three-dots"></i></div>
       </div>
       <div class="post-content">
@@ -78,8 +81,10 @@
         
         <div class="filtros" style="margin: 1.5rem 0; display: flex; gap: 0.5rem;">
           <button type="button" class="skill-tag active" data-filter="all" aria-pressed="true" data-i18n="filterAll" style="cursor:pointer;">Todos</button>
+          <button type="button" class="skill-tag" data-filter="Python" aria-pressed="false" style="cursor:pointer;">Python</button>
           <button type="button" class="skill-tag" data-filter="JavaScript" aria-pressed="false" style="cursor:pointer;">JavaScript</button>
           <button type="button" class="skill-tag" data-filter="HTML/CSS" aria-pressed="false" style="cursor:pointer;">HTML/CSS</button>
+          <button type="button" class="skill-tag" data-filter="PHP" aria-pressed="false" style="cursor:pointer;">PHP</button>
         </div>
 
         <div class="projects-grid" id="meus-projetos"></div>
@@ -95,32 +100,43 @@
       <div class="post-content">
         <h3 data-i18n="skillsHeading">Habilidades Técnicas</h3>
         <div class="skills-grid">
-          <span class="skill-tag">HTML5 & CSS3</span>
+          <span class="skill-tag">HTML5 &amp; CSS3</span>
           <span class="skill-tag">JavaScript (ES6+)</span>
-          <span class="skill-tag">Python & Supabase</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C &amp; C++</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">PostgreSQL &amp; Supabase</span>
+          <span class="skill-tag" data-i18n="apiIntegration">Integração de APIs</span>
           <span class="skill-tag" data-i18n="responsiveDesign">Design Responsivo</span>
-          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Git &amp; GitHub</span>
         </div>
         
-        <h3 data-i18n="careerHeading">Trajetória Profissional</h3>
+        <h3 data-i18n="careerHeading">Experiência e Formação</h3>
         <div class="timeline">
           <div class="timeline-item">
             <div class="year" data-i18n="yearCurrent">2026 — Hoje</div>
-            <p data-i18n="careerFreelance" data-i18n-html><strong>Desenvolvedor Web Freelance</strong>. Criação de soluções web, desde o back-end com IA até interfaces mobile-first.</p>
+            <p data-i18n="careerFreelance" data-i18n-html><strong>Desenvolvedor web freelancer</strong>. Desenvolvo soluções web do levantamento de requisitos à publicação, com interfaces responsivas, integrações de APIs e automações com Python, Supabase e IA.</p>
           </div>
           <div class="timeline-item">
             <div class="year" data-i18n="yearCurrent">2026 — Hoje</div>
-            <p data-i18n="careerUniversity" data-i18n-html><strong>Bacharelado em Ciência da Computação</strong>. Atualmente no <strong>3º período</strong> da Universidade Veiga de Almeida (UVA) - RJ, após transferência por motivos familiares.</p>
+            <p data-i18n="careerUniversity" data-i18n-html><strong>Bacharelado em Ciência da Computação</strong> na Universidade Veiga de Almeida (UVA), no Rio de Janeiro. Conclusão prevista para julho de 2029.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="year" data-i18n="yearDesign">2025 — Hoje</div>
+            <p data-i18n="careerDesign" data-i18n-html><strong>Designer gráfico e web designer freelancer</strong>. Crio identidades visuais, protótipos de interfaces e peças digitais, com foco em usabilidade.</p>
           </div>
           <div class="timeline-item">
             <div class="year">2025</div>
-            <p data-i18n="careerFirstYear" data-i18n-html><strong>Bacharelado em Ciência da Computação</strong>. Cursei o primeiro ano da graduação em uma instituição de ensino superior em Porto Velho, Rondônia. Ao final de 2025, realizei transferência para a Universidade Veiga de Almeida (UVA) - RJ por motivos familiares.</p>
+            <p data-i18n="careerFirstYear" data-i18n-html><strong>Ciência da Computação na Afya</strong>. Cursei o primeiro ano da graduação em Porto Velho, Rondônia, antes de me transferir para a UVA.</p>
           </div>
           <div class="timeline-item">
             <div class="year" data-i18n="yearAthlete">Até 2025</div>
             <p data-i18n="careerAthlete" data-i18n-html><strong>Atleta Profissional (Futebol)</strong>. Atuação com foco em resiliência e trabalho em equipe sob pressão.</p>
           </div>
         </div>
+        <h3 data-i18n="coursesHeading">Cursos e Bootcamps</h3>
+        <p data-i18n="coursesDio">Bootcamps de desenvolvimento de software na Digital Innovation One (DIO), com foco em IA, segurança de dados e práticas de código.</p>
       </div>
     </section>
 

@@ -362,7 +362,7 @@ aside {
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   gap: .45rem;
 }
@@ -511,6 +511,7 @@ button.skill-tag {
 }
 
 .proj-title {
+  margin: 0;
   font: 700 1rem var(--f-deco);
   color: #fff;
   line-height: 1.25;
@@ -533,6 +534,33 @@ button.skill-tag {
   padding: .36rem .58rem;
   font-size: .62rem;
   background: rgba(255,255,255,.025);
+}
+
+.profile-role {
+  margin: 0 0 .85rem;
+  color: white;
+  font: 800 clamp(1.45rem, 3vw, 2.15rem) var(--f-deco);
+}
+
+.proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .85rem;
+  font-size: .73rem;
+}
+
+.proj-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--acento-light);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.proj-links a:hover,
+.proj-links a:focus-visible {
+  color: white;
 }
 
 .timeline {
@@ -691,7 +719,7 @@ button.skill-tag {
   .contact {
     grid-column: 1 / -1;
     grid-row: 2;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .contact a {

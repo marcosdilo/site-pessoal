@@ -38,28 +38,57 @@ window.addEventListener('scroll', () => {
 });
 
 
+const githubProfile = 'https://github.com/marcosdilo';
+const profileProjects = githubProfile + '/marcosdilo#-projetos-em-destaque';
 const projetos = [
   {
-    titulo: 'automationTitle',
-    icone: "🤖",
-    descricao: 'automationDescription',
-    tags: ["Python", "Supabase", "IA"],
-    link: "#" 
+    key: 'downloadStudio',
+    icon: '📁',
+    tags: ['Python', 'PySide6', 'watchdog', 'Windows'],
+    links: {
+      repository: githubProfile + '/downloadstudio',
+      download: githubProfile + '/downloadstudio/releases/latest',
+    },
   },
   {
-    titulo: 'storeTitle',
-    icone: "🛒",
-    descricao: 'storeDescription',
-    tags: ["JavaScript", "PostgreSQL", "HTML/CSS"],
-    link: "#"
+    key: 'automation',
+    icon: '🤖',
+    tags: ['Python', 'Supabase', 'IA'],
+    links: { projectDetails: profileProjects },
   },
   {
-    titulo: 'portfolioTitle',
-    icone: "🌐",
-    descricao: 'portfolioDescription',
-    tags: ["HTML/CSS", "JavaScript"],
-    link: "https://github.com/marcosdilo" 
-  }
+    key: 'store',
+    icon: '🛒',
+    tags: ['JavaScript', 'PostgreSQL', 'HTML/CSS'],
+    links: { projectDetails: profileProjects },
+  },
+  {
+    key: 'portfolio',
+    icon: '🌐',
+    tags: ['HTML/CSS', 'JavaScript', 'GitHub Pages'],
+    links: { repository: githubProfile + '/site-pessoal' },
+  },
+  {
+    key: 'calculator',
+    icon: '🧮',
+    tags: ['HTML/CSS', 'JavaScript', 'GitHub Pages'],
+    links: {
+      repository: githubProfile + '/calculadora',
+      demo: 'https://marcosdilo.github.io/calculadora/',
+    },
+  },
+  {
+    key: 'pizza',
+    icon: '🍕',
+    tags: ['HTML/CSS', 'PHP'],
+    links: { repository: githubProfile + '/pizza-chefe' },
+  },
+  {
+    key: 'codedex',
+    icon: '📚',
+    tags: ['Python'],
+    links: { repository: githubProfile + '/estudos-codedex' },
+  },
 ];
 
 const container = document.getElementById('meus-projetos');
@@ -84,30 +113,25 @@ const localizedElements = Array.from(document.querySelectorAll('[data-i18n]'), (
 
 function renderProjetos() {
   const strings = translations[activeLanguage];
-  container.querySelectorAll('.project-card').forEach((card) => observer.unobserve(card));
-  const projetosFiltrados = projetos.filter(proj => {
-    if (activeFilter === 'all') return true;
-    if (activeFilter === 'HTML/CSS') return proj.tags.includes('HTML/CSS') || proj.tags.includes('CSS');
-    return proj.tags.includes(activeFilter);
-  });
+  const projetosFiltrados = projetos.filter(({ tags }) => activeFilter === 'all' || tags.includes(activeFilter));
 
-  container.innerHTML = projetosFiltrados.map((proj, index) => {
-    const tagsHTML = proj.tags.map(tag => `<span class="proj-tag">${tag === 'IA' ? strings.ai : tag}</span>`).join('');
-    
-    const delay = index * 0.15; 
-    
+  container.innerHTML = projetosFiltrados.map(({ key, icon, tags, links }) => {
+    const title = strings[key + 'Title'];
+    const tagsHTML = tags.map(tag => `<span class="proj-tag">${tag === 'IA' ? strings.ai : tag}</span>`).join('');
+    const linksHTML = Object.entries(links).map(([label, url]) => `
+      <a href="${url}" target="_blank" rel="noopener" aria-label="${strings[label]} — ${title}">${strings[label]} ↗</a>
+    `).join('');
+
     return `
-      <a href="${proj.link}" target="_blank" rel="noopener" class="project-card hidden-scroll" style="text-decoration: none; color: inherit; transition-delay: ${delay}s">
-        <div class="proj-icon">${proj.icone}</div>
-        <div class="proj-title">${strings[proj.titulo]}</div>
-        <div class="proj-desc">${strings[proj.descricao]}</div>
+      <article class="project-card">
+        <div class="proj-icon" aria-hidden="true">${icon}</div>
+        <h4 class="proj-title">${title}</h4>
+        <div class="proj-desc">${strings[key + 'Description']}</div>
         <div class="proj-tags">${tagsHTML}</div>
-      </a>
+        <div class="proj-links">${linksHTML}</div>
+      </article>
     `;
   }).join('');
-
-  // Diz ao observer para vigiar os novos cards injetados
-  container.querySelectorAll('.project-card').forEach((el) => observer.observe(el));
 }
 
 function applyLanguage(language) {
