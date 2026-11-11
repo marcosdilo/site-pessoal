@@ -1,151 +1,313 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Marcos Sousa, desenvolvedor full-stack com foco em aplicações web, automação de processos e integração de IA." data-i18n="description" data-i18n-attribute="content">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://ipapi.co/languages/; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151019">
+  <meta name="description" content="Marcos Sousa, desenvolvedor full-stack. Projetos de software, automação com Python e desenvolvimento web." data-i18n="description" data-i18n-attribute="content">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marcos Sousa — Desenvolvedor full-stack">
+  <meta property="og:description" content="Projetos de software, automação com Python e desenvolvimento web.">
+  <meta property="og:url" content="https://marcosdilo.github.io/site-pessoal/">
+  <meta property="og:image" content="https://marcosdilo.github.io/site-pessoal/unnamed.jpg">
+  <link rel="canonical" href="https://marcosdilo.github.io/site-pessoal/">
+  <link rel="stylesheet" href="styleteste.css?v=portfolio-6">
   <title data-i18n="pageTitle">Marcos Sousa — Portfólio</title>
-  <link rel="stylesheet" href="styleteste.css?v=portfolio-4">
+  <script src="translations.js?v=portfolio-7" defer></script>
+  <script src="app.js?v=portfolio-6" defer></script>
 </head>
 <body>
-
-<article class="post">
-  
-  <aside class="sidebar-fixa">
-    <div class="avatar">
-      <img src="unnamed.jpg" alt="Marcos Sousa">
-      <i class="bi bi-stars"></i>
-      <i class="bi bi-stars"></i>
-      <div class="info" data-i18n="avatarCaption">Atleta → Dev 🚀</div>
-    </div>
-    
-    <div class="sidebar-controls">
-      <a href="Curriculo Marcos_Sousa.pdf" target="_blank" rel="noopener" class="btn-cv" aria-label="Baixar Currículo PDF" data-i18n="resumeLabel" data-i18n-attribute="aria-label">
-        <i class="bi bi-file-earmark-person" aria-hidden="true"></i> <span data-i18n="resume">Currículo</span>
+  <a class="skip-link" href="#conteudo-principal" data-i18n="skipLink">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="site-nav wrap">
+      <a class="wordmark" href="#inicio" aria-label="Marcos Sousa">
+        <span class="monogram" aria-hidden="true">M</span><span>Marcos Sousa</span>
       </a>
-      <select id="site-language" class="language-select" aria-label="Idioma do site" data-i18n="languageLabel" data-i18n-attribute="aria-label" hidden>
+      <nav class="nav-links" aria-label="Navegação principal" data-i18n="mainNav" data-i18n-attribute="aria-label">
+        <a href="#projetos" data-i18n="navProjects">Projetos</a>
+        <a href="#sobre" data-i18n="navAbout">Sobre</a>
+        <a href="#certificados" data-i18n="certificatesHeading">Certificados</a>
+        <a href="#contato" data-i18n="navContact">Contato</a>
+      </nav>
+      <select id="site-language" aria-label="Idioma do site" data-i18n="languageLabel" data-i18n-attribute="aria-label" hidden>
         <option value="pt-BR" lang="pt-BR">Português</option>
         <option value="en" lang="en">English</option>
         <option value="es" lang="es">Español</option>
         <option value="fr" lang="fr">Français</option>
       </select>
     </div>
+  </header>
 
-    <nav class="contact">
-      <a href="#inicio" title="Início" data-i18n="navHome" data-i18n-attribute="title"><i class="bi bi-house-door"></i></a>
-      <a href="#projetos" title="Projetos" data-i18n="navProjects" data-i18n-attribute="title"><i class="bi bi-folder"></i></a>
-      <a href="#sobre" title="Sobre" data-i18n="navAbout" data-i18n-attribute="title"><i class="bi bi-person"></i></a>
-      <a href="https://wa.me/5521982749158" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://github.com/marcosdilo" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-      <a href="mailto:marcos.sousadilo@gmail.com" title="E-mail" data-i18n="emailLabel" data-i18n-attribute="title"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-    </nav>
-  </aside>
-
-  <main id="conteudo-principal">
-    
-    <div class="header hidden-scroll">
-      <img src="unnamed2.jpg" alt="Logo de Marcos Sousa" data-i18n="logoAlt" data-i18n-attribute="alt">
-      <div class="username">Marcos <span>Sousa</span></div>
-    </div>
-
-    <section id="inicio" class="page-section hidden-scroll">
-      <div class="post-actions">
-        <div class="link"><i class="bi bi-house-door-fill"></i></div>
-        <div class="fecha" data-i18n="homeSection">início · visão geral</div>
-        <div class="post-buttons"><i class="bi bi-three-dots"></i></div>
+  <main id="conteudo-principal" class="wrap" tabindex="-1">
+    <section id="inicio" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="hero-role" data-i18n="role">Desenvolvedor full-stack</p>
+        <h1 id="hero-heading">Marcos <span>Sousa.</span></h1>
+        <p class="hero-intro" data-i18n="heroIntro">Desenvolvo aplicações web e automatizo tarefas com Python e Supabase. Estudo Ciência da Computação na Universidade Veiga de Almeida.</p>
+        <p class="availability" data-i18n="availability">Busco oportunidades de estágio ou de desenvolvedor júnior.</p>
+        <div class="actions">
+          <a class="button primary" href="#projetos"><span data-i18n="heroProjects">Ver projetos</span><span aria-hidden="true">↓</span></a>
+          <a class="button secondary" id="resume-link" href="Curriculo Marcos_Sousa.pdf?v=portfolio-6" target="_blank" rel="noopener noreferrer"><span data-i18n="resumeButton">Currículo (PDF)</span><span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-      <div class="post-content">
-        <h1 class="profile-role" data-i18n="role">Desenvolvedor full-stack</h1>
-        <p data-i18n="intro" data-i18n-html>Sou <strong>Marcos Filipe Santos de Sousa</strong>, desenvolvedor freelancer e estudante de Ciência da Computação na Universidade Veiga de Almeida. Moro em Nova Iguaçu, no Rio de Janeiro, e desenvolvo aplicações web e automações de processos com IA.</p>
-        <p data-i18n="availability">Busco oportunidades de estágio ou de desenvolvedor júnior.</p>
-        
-        <h3 data-i18n="athleteHeading">De Atleta a Desenvolvedor</h3>
-        <p data-i18n="athletePast">Antes de mergulhar no universo dos códigos, atuei como atleta profissional. O esporte me ensinou que o sucesso é fruto de foco, resiliência e repetição.</p>
-        <p data-i18n="athleteToday">Hoje, aplico essa exata mentalidade de alta performance no desenvolvimento de software. Encaro a resolução de um bug complexo da mesma forma que encarava um treino difícil.</p>
-        
-        <a href="#projetos" class="btn-send" data-i18n="projectCta" style="margin-top: 1rem; display:inline-block; text-decoration: none;">
-          Ver Meus Projetos →
-        </a>
+      <figure class="portrait">
+        <img src="unnamed.jpg" width="533" height="948" alt="Marcos Sousa" fetchpriority="high">
+        <figcaption data-i18n="location">Nova Iguaçu, RJ · Brasil</figcaption>
+      </figure>
+    </section>
+
+    <section id="projetos" class="page-section" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <h2 id="projects-heading" data-i18n="projectsHeading">Projetos selecionados</h2>
+        <a class="text-link" href="https://github.com/marcosdilo?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="githubProjects">Mais no GitHub</span> <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar projetos por tecnologia" data-i18n="filtersLabel" data-i18n-attribute="aria-label" hidden>
+        <button type="button" data-filter="all" aria-pressed="true" data-i18n="filterAll">Todos</button>
+        <button type="button" data-filter="Python" aria-pressed="false">Python</button>
+        <button type="button" data-filter="JavaScript" aria-pressed="false">JavaScript</button>
+        <button type="button" data-filter="TypeScript" aria-pressed="false">TypeScript</button>
+        <button type="button" data-filter="C#" aria-pressed="false">C#</button>
+        <button type="button" data-filter="HTML/CSS" aria-pressed="false">HTML/CSS</button>
+        <button type="button" data-filter="PHP" aria-pressed="false">PHP</button>
+      </div>
+      <div class="projects-grid" id="meus-projetos">
+        <article class="project-card project-feature" data-project-tags="Python|PySide6|watchdog|Windows">
+          <div class="project-copy">
+            <span class="project-status released" data-i18n="released">Disponível para Windows</span>
+            <h3 id="project-downloadStudio-title" data-i18n="downloadStudioTitle">Download Studio</h3>
+            <p data-i18n="downloadStudioDescription">Aplicativo para Windows que organiza downloads em categorias configuráveis. Monitora a pasta, verifica os arquivos antes de movê-los e protege contra sobrescrita.</p>
+            <ul class="tech-list"><li>Python</li><li>PySide6</li><li>watchdog</li><li>Windows</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/downloadstudio" target="_blank" rel="noopener noreferrer" aria-labelledby="project-downloadStudio-repository project-downloadStudio-title"><span id="project-downloadStudio-repository" data-i18n="repository">Repositório</span> <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/marcosdilo/downloadstudio/releases/latest" target="_blank" rel="noopener noreferrer" aria-labelledby="project-downloadStudio-download project-downloadStudio-title"><span id="project-downloadStudio-download" data-i18n="download">Baixar para Windows</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/download-studio.png" width="1100" height="800" loading="lazy" alt="Tela inicial do Download Studio" data-i18n="downloadStudioAlt" data-i18n-attribute="alt">
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="Python|Supabase|IA">
+          <div class="project-copy">
+            <h3 id="project-automation-title" data-i18n="automationTitle">Automação de Pedidos e Estoque</h3>
+            <p data-i18n="automationDescription">Sistema em uso em uma lanchonete. Automatiza o recebimento de pedidos, acompanha o estoque em tempo real e usa IA para otimizar o atendimento.</p>
+            <ul class="tech-list"><li>Python</li><li>Supabase</li><li data-i18n="ai">IA</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/marcosdilo#-projetos-em-destaque" target="_blank" rel="noopener noreferrer" aria-labelledby="project-automation-projectDetails project-automation-title"><span id="project-automation-projectDetails" data-i18n="projectDetails">Detalhes no perfil GitHub</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="TypeScript|Electron|Python|Whisper">
+          <div class="project-copy">
+            <span class="project-status" data-i18n="inDevelopment">Em desenvolvimento</span>
+            <h3 id="project-cortaLocal-title" data-i18n="cortaLocalTitle">Corta Local</h3>
+            <p data-i18n="cortaLocalDescription">Adaptação do OpenCut Classic para Windows com um assistente de edição offline. Analisa vídeos de referência, transcreve áudio e sugere cortes em uma nova cena, preservando a timeline original.</p>
+            <ul class="tech-list"><li>TypeScript</li><li>Electron</li><li>Python</li><li>Whisper</li></ul>
+            <div class="project-links">
+              <span class="project-note" data-i18n="unpublishedSource">Código ainda não publicado</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="TypeScript|React|Cloudflare D1">
+          <div class="project-copy">
+            <span class="project-status" data-i18n="inDevelopment">Em desenvolvimento</span>
+            <h3 id="project-missaoCfo-title" data-i18n="missaoCfoTitle">Missão CFO</h3>
+            <p data-i18n="missaoCfoDescription">Plataforma privada de estudos para o concurso de oficiais do CBMERJ, com questões, revisões espaçadas, simulados e acompanhamento do progresso.</p>
+            <ul class="tech-list"><li>TypeScript</li><li>React</li><li>Cloudflare D1</li></ul>
+            <div class="project-links">
+              <span class="project-note" data-i18n="unpublishedSource">Código ainda não publicado</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="C#|WinForms|LibreHardwareMonitor">
+          <div class="project-copy">
+            <h3 id="project-monitorPc-title" data-i18n="monitorPcTitle">Monitor PC</h3>
+            <p data-i18n="monitorPcDescription">Aplicativo para Windows com métricas de CPU, GPU, memória, discos e rede, gráficos em tempo real e exportação CSV.</p>
+            <ul class="tech-list"><li>C#</li><li>WinForms</li><li>LibreHardwareMonitor</li></ul>
+            <div class="project-links">
+              <span class="project-note" data-i18n="unpublishedSource">Código ainda não publicado</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="HTML/CSS|JavaScript|GitHub Pages">
+          <div class="project-copy">
+            <h3 id="project-portfolio-title" data-i18n="portfolioTitle">Portfólio Pessoal Interativo</h3>
+            <p data-i18n="portfolioDescription">Este portfólio, feito com JavaScript puro e CSS responsivo, tem quatro idiomas e filtros por tecnologia.</p>
+            <ul class="tech-list"><li>HTML/CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/site-pessoal" target="_blank" rel="noopener noreferrer" aria-labelledby="project-portfolio-repository project-portfolio-title"><span id="project-portfolio-repository" data-i18n="repository">Repositório</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="JavaScript|PostgreSQL|HTML/CSS">
+          <div class="project-copy">
+            <span class="project-status" data-i18n="inDevelopment">Em desenvolvimento</span>
+            <h3 id="project-store-title" data-i18n="storeTitle">E-commerce para Marca Própria</h3>
+            <p data-i18n="storeDescription">Loja virtual para uma marca de roupas, com vitrine digital e estrutura de catálogo em PostgreSQL.</p>
+            <ul class="tech-list"><li>JavaScript</li><li>PostgreSQL</li><li>HTML/CSS</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/marcosdilo#-projetos-em-destaque" target="_blank" rel="noopener noreferrer" aria-labelledby="project-store-projectDetails project-store-title"><span id="project-store-projectDetails" data-i18n="projectDetails">Detalhes no perfil GitHub</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="HTML/CSS|JavaScript|GitHub Pages">
+          <div class="project-copy">
+            <h3 id="project-calculator-title" data-i18n="calculatorTitle">Calculadora</h3>
+            <p data-i18n="calculatorDescription">Calculadora web em JavaScript com operações básicas, porcentagens e atalhos de teclado.</p>
+            <ul class="tech-list"><li>HTML/CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/calculadora" target="_blank" rel="noopener noreferrer" aria-labelledby="project-calculator-repository project-calculator-title"><span id="project-calculator-repository" data-i18n="repository">Repositório</span> <span aria-hidden="true">↗</span></a>
+              <a href="https://marcosdilo.github.io/calculadora/" target="_blank" rel="noopener noreferrer" aria-labelledby="project-calculator-demo project-calculator-title"><span id="project-calculator-demo" data-i18n="demo">Abrir calculadora</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="HTML/CSS|PHP">
+          <div class="project-copy">
+            <span class="project-status" data-i18n="inDevelopment">Em desenvolvimento</span>
+            <h3 id="project-pizza-title" data-i18n="pizzaTitle">Pizza Chefe</h3>
+            <p data-i18n="pizzaDescription">Protótipo web com telas de login em HTML e um script PHP para processar o formulário. O código está em um ZIP no repositório.</p>
+            <ul class="tech-list"><li>HTML/CSS</li><li>PHP</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/pizza-chefe" target="_blank" rel="noopener noreferrer" aria-labelledby="project-pizza-repository project-pizza-title"><span id="project-pizza-repository" data-i18n="repository">Repositório</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-project-tags="Python">
+          <div class="project-copy">
+            <h3 id="project-codedex-title" data-i18n="codedexTitle">Estudos no Codédex</h3>
+            <p data-i18n="codedexDescription">Registro de estudos no Codédex, com um roteiro para praticar Python, HTML, CSS e JavaScript.</p>
+            <ul class="tech-list"><li>Python</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/marcosdilo/estudos-codedex" target="_blank" rel="noopener noreferrer" aria-labelledby="project-codedex-repository project-codedex-title"><span id="project-codedex-repository" data-i18n="repository">Repositório</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="projetos" class="page-section hidden-scroll">
-      <div class="post-actions">
-        <div class="link"><i class="bi bi-folder-fill"></i></div>
-        <div class="fecha" data-i18n="projectsSection">projetos · GitHub e trabalhos</div>
-        <div class="post-buttons"><i class="bi bi-three-dots"></i></div>
+    <section id="sobre" class="page-section" aria-labelledby="about-heading">
+      <div class="section-header">
+        <h2 id="about-heading" data-i18n="aboutHeading">Sobre mim</h2>
       </div>
-      <div class="post-content">
-        <h3 data-i18n="projectsHeading">Projetos selecionados</h3>
-        <p data-i18n="filterHelp">Filtre abaixo pelas tecnologias que utilizei:</p>
-        
-        <div class="filtros" style="margin: 1.5rem 0; display: flex; gap: 0.5rem;">
-          <button type="button" class="skill-tag active" data-filter="all" aria-pressed="true" data-i18n="filterAll" style="cursor:pointer;">Todos</button>
-          <button type="button" class="skill-tag" data-filter="Python" aria-pressed="false" style="cursor:pointer;">Python</button>
-          <button type="button" class="skill-tag" data-filter="JavaScript" aria-pressed="false" style="cursor:pointer;">JavaScript</button>
-          <button type="button" class="skill-tag" data-filter="TypeScript" aria-pressed="false" style="cursor:pointer;">TypeScript</button>
-          <button type="button" class="skill-tag" data-filter="C#" aria-pressed="false" style="cursor:pointer;">C#</button>
-          <button type="button" class="skill-tag" data-filter="HTML/CSS" aria-pressed="false" style="cursor:pointer;">HTML/CSS</button>
-          <button type="button" class="skill-tag" data-filter="PHP" aria-pressed="false" style="cursor:pointer;">PHP</button>
+      <div class="about-layout">
+        <div>
+          <h3 data-i18n="athleteHeading">De atleta a desenvolvedor</h3>
+          <p class="about-text" data-i18n="aboutStory">Fui jogador profissional de futebol antes de migrar para o desenvolvimento. Levo a disciplina dos treinos para os projetos freelance. Escuto quem vai usar o software, testo cedo e ajusto o que precisa melhorar.</p>
+          <h3 class="skills-heading" data-i18n="skillsHeading">Habilidades técnicas</h3>
+          <dl class="skill-groups">
+            <div><dt>Front-end</dt><dd>HTML5, CSS3, JavaScript, React</dd></div>
+            <div><dt data-i18n="backendSkills">Back-end e dados</dt><dd>Python, Node.js, PostgreSQL, Supabase</dd></div>
+            <div><dt data-i18n="toolSkills">Ferramentas e práticas</dt><dd data-i18n="toolStack">Git, GitHub, integração de APIs, design responsivo</dd></div>
+          </dl>
         </div>
-
-        <div class="projects-grid" id="meus-projetos"></div>
+        <div>
+          <h3 data-i18n="careerHeading">Experiência e formação</h3>
+          <ol class="timeline">
+            <li>
+              <span class="timeline-date" data-i18n="yearCurrent">2026 — Hoje</span>
+              <p data-i18n="careerFreelance">Desenvolvedor web freelancer. Desenvolvo soluções web do levantamento de requisitos à publicação, com interfaces responsivas, integrações de APIs e automações com Python e Supabase.</p>
+            </li>
+            <li>
+              <span class="timeline-date" data-i18n="yearCurrent">2026 — Hoje</span>
+              <p data-i18n="careerUniversity">Bacharelado em Ciência da Computação na Universidade Veiga de Almeida (UVA), no Rio de Janeiro. Conclusão prevista para julho de 2029.</p>
+            </li>
+            <li>
+              <span class="timeline-date" data-i18n="yearDesign">2025 — Hoje</span>
+              <p data-i18n="careerDesign">Designer gráfico e web designer freelancer. Crio identidades visuais, protótipos de interfaces e peças digitais com foco em usabilidade.</p>
+            </li>
+            <li>
+              <span class="timeline-date">2025</span>
+              <p data-i18n="careerFirstYear">Ciência da Computação na Afya. Cursei o primeiro ano da graduação em Porto Velho, Rondônia, antes de me transferir para a UVA.</p>
+            </li>
+          </ol>
+          <p class="training-note" data-i18n="coursesDio">Bootcamps de desenvolvimento de software na Digital Innovation One (DIO), com foco em segurança de dados e práticas de programação.</p>
+        </div>
       </div>
     </section>
 
-    <section id="sobre" class="page-section hidden-scroll">
-      <div class="post-actions">
-        <div class="link"><i class="bi bi-person-fill"></i></div>
-        <div class="fecha" data-i18n="aboutSection">sobre mim · trajetória</div>
-        <div class="post-buttons"><i class="bi bi-three-dots"></i></div>
+    <section id="certificados" class="page-section" aria-labelledby="certificates-heading">
+      <div class="section-header">
+        <h2 id="certificates-heading" data-i18n="certificatesHeading">Certificados</h2>
       </div>
-      <div class="post-content">
-        <h3 data-i18n="skillsHeading">Habilidades Técnicas</h3>
-        <div class="skills-grid">
-          <span class="skill-tag">HTML5 &amp; CSS3</span>
-          <span class="skill-tag">JavaScript (ES6+)</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">C &amp; C++</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">PostgreSQL &amp; Supabase</span>
-          <span class="skill-tag" data-i18n="apiIntegration">Integração de APIs</span>
-          <span class="skill-tag" data-i18n="responsiveDesign">Design Responsivo</span>
-          <span class="skill-tag">Git &amp; GitHub</span>
-        </div>
-        
-        <h3 data-i18n="careerHeading">Experiência e Formação</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="year" data-i18n="yearCurrent">2026 — Hoje</div>
-            <p data-i18n="careerFreelance" data-i18n-html><strong>Desenvolvedor web freelancer</strong>. Desenvolvo soluções web do levantamento de requisitos à publicação, com interfaces responsivas, integrações de APIs e automações com Python, Supabase e IA.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="year" data-i18n="yearCurrent">2026 — Hoje</div>
-            <p data-i18n="careerUniversity" data-i18n-html><strong>Bacharelado em Ciência da Computação</strong> na Universidade Veiga de Almeida (UVA), no Rio de Janeiro. Conclusão prevista para julho de 2029.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="year" data-i18n="yearDesign">2025 — Hoje</div>
-            <p data-i18n="careerDesign" data-i18n-html><strong>Designer gráfico e web designer freelancer</strong>. Crio identidades visuais, protótipos de interfaces e peças digitais, com foco em usabilidade.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="year">2025</div>
-            <p data-i18n="careerFirstYear" data-i18n-html><strong>Ciência da Computação na Afya</strong>. Cursei o primeiro ano da graduação em Porto Velho, Rondônia, antes de me transferir para a UVA.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="year" data-i18n="yearAthlete">Até 2025</div>
-            <p data-i18n="careerAthlete" data-i18n-html><strong>Atleta Profissional (Futebol)</strong>. Atuação com foco em resiliência e trabalho em equipe sob pressão.</p>
-          </div>
-        </div>
-        <h3 data-i18n="coursesHeading">Cursos e Bootcamps</h3>
-        <p data-i18n="coursesDio">Bootcamps de desenvolvimento de software na Digital Innovation One (DIO), com foco em IA, segurança de dados e práticas de código.</p>
+      <div class="certificate-group">
+        <h3 data-i18n="certificateWorkshops">Oficinas e workshops</h3>
+        <ul class="certificate-list">
+          <li>
+            <a href="certificados/experiencia-ux.pdf" target="_blank" rel="noopener noreferrer">
+              <strong data-i18n="certificateUx">Experiência que Transforma: Repensando tudo com Olhar de UX</strong>
+              <span class="certificate-meta">2º Conexão Tech.RO · <time datetime="2025-11-11" data-certificate-date>11/11/2025</time> · 4 h</span>
+              <span class="certificate-link" data-i18n="certificatePdf">Ver certificado (PDF) ↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="certificados/ethical-hacking.pdf" target="_blank" rel="noopener noreferrer">
+              <strong lang="en">Ethical Hacking</strong>
+              <span class="certificate-meta">2º Conexão Tech.RO · <time datetime="2025-11-12" data-certificate-date>12/11/2025</time> · 4 h</span>
+              <span class="certificate-link" data-i18n="certificatePdf">Ver certificado (PDF) ↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="certificate-group">
+        <h3 data-i18n="certificateTalks">Palestras</h3>
+        <ul class="certificate-list">
+          <li>
+            <a href="certificados/perceptron-a-multiagentes.pdf" target="_blank" rel="noopener noreferrer">
+              <strong data-i18n="certificateAi">Perceptron a Multiagentes: História e Aplicabilidade de IA na Atualidade</strong>
+              <span class="certificate-meta">2º Conexão Tech.RO · <time datetime="2025-11-10" data-certificate-date>10/11/2025</time> · 1 h</span>
+              <span class="certificate-link" data-i18n="certificatePdf">Ver certificado (PDF) ↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="certificados/matematica-nos-sistemas.pdf" target="_blank" rel="noopener noreferrer">
+              <strong data-i18n="certificateMath">Entre Números e Códigos: a matemática oculta nos sistemas computacionais</strong>
+              <span class="certificate-meta">2º Conexão Tech.RO · <time datetime="2025-11-10" data-certificate-date>10/11/2025</time> · 1 h</span>
+              <span class="certificate-link" data-i18n="certificatePdf">Ver certificado (PDF) ↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="certificados/osint-na-era-da-informacao.pdf" target="_blank" rel="noopener noreferrer">
+              <strong data-i18n="certificateOsint">OSINT na Era da Informação: Como Dados Públicos Revelam Tudo Sobre Nós</strong>
+              <span class="certificate-meta">2º Conexão Tech.RO · <time datetime="2025-11-10" data-certificate-date>10/11/2025</time> · 1 h</span>
+              <span class="certificate-link" data-i18n="certificatePdf">Ver certificado (PDF) ↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="certificate-group">
+        <h3 data-i18n="certificateEvents">Eventos acadêmicos</h3>
+        <ul class="certificate-list">
+          <li>
+            <a href="certificados/jornada-tecnologia-inovacao.pdf" target="_blank" rel="noopener noreferrer">
+              <strong data-i18n="certificateTechnology">1ª Jornada de Tecnologia e Inovação</strong>
+              <span class="certificate-meta">Afya Centro Universitário São Lucas · <time datetime="2025-11-06" data-certificate-date>06/11/2025</time> · 4 h</span>
+              <span class="certificate-link" data-i18n="certificatePdf">Ver certificado (PDF) ↗</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <section id="contato" class="contact-panel" aria-labelledby="contact-heading">
+      <div>
+        <h2 id="contact-heading" data-i18n="contactHeading">Vamos conversar?</h2>
+        <p data-i18n="contactIntro">Se você está montando um time ou tem um projeto em mente, pode me escrever.</p>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="mailto:marcos.sousadilo@gmail.com"><span data-i18n="sendEmail">Enviar e-mail</span><span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="https://wa.me/5521982749158" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   </main>
-</article>
 
-<script src="translations.js?v=portfolio-4"></script>
-<script src="app.js?v=portfolio-4"></script>
+  <footer class="site-footer wrap">
+    <span>Marcos Sousa</span>
+    <details>
+      <summary data-i18n="privacyHeading">Privacidade</summary>
+      <p data-i18n="privacyText">Sua escolha de idioma fica neste navegador. Quando os idiomas configurados nele não estão disponíveis, o ipapi.co usa o endereço IP para sugerir um idioma da região.</p>
+    </details>
+    <a class="text-link" href="#inicio" data-i18n="backToTop">Voltar ao topo ↑</a>
+  </footer>
 </body>
 </html>
