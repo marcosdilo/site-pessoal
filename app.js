@@ -57,16 +57,34 @@ const projetos = [
     links: { projectDetails: profileProjects },
   },
   {
-    key: 'store',
-    icon: '🛒',
-    tags: ['JavaScript', 'PostgreSQL', 'HTML/CSS'],
-    links: { projectDetails: profileProjects },
+    key: 'cortaLocal',
+    icon: '🎬',
+    tags: ['TypeScript', 'Electron', 'Python', 'Whisper'],
+    inDevelopment: true,
+  },
+  {
+    key: 'missaoCfo',
+    icon: '🎯',
+    tags: ['TypeScript', 'React', 'Cloudflare D1'],
+    inDevelopment: true,
+  },
+  {
+    key: 'monitorPc',
+    icon: '📊',
+    tags: ['C#', 'WinForms', 'LibreHardwareMonitor'],
   },
   {
     key: 'portfolio',
     icon: '🌐',
     tags: ['HTML/CSS', 'JavaScript', 'GitHub Pages'],
     links: { repository: githubProfile + '/site-pessoal' },
+  },
+  {
+    key: 'store',
+    icon: '🛒',
+    tags: ['JavaScript', 'PostgreSQL', 'HTML/CSS'],
+    links: { projectDetails: profileProjects },
+    inDevelopment: true,
   },
   {
     key: 'calculator',
@@ -82,6 +100,7 @@ const projetos = [
     icon: '🍕',
     tags: ['HTML/CSS', 'PHP'],
     links: { repository: githubProfile + '/pizza-chefe' },
+    inDevelopment: true,
   },
   {
     key: 'codedex',
@@ -115,20 +134,26 @@ function renderProjetos() {
   const strings = translations[activeLanguage];
   const projetosFiltrados = projetos.filter(({ tags }) => activeFilter === 'all' || tags.includes(activeFilter));
 
-  container.innerHTML = projetosFiltrados.map(({ key, icon, tags, links }) => {
+  container.innerHTML = projetosFiltrados.map(({ key, icon, tags, links, inDevelopment }) => {
     const title = strings[key + 'Title'];
     const tagsHTML = tags.map(tag => `<span class="proj-tag">${tag === 'IA' ? strings.ai : tag}</span>`).join('');
-    const linksHTML = Object.entries(links).map(([label, url]) => `
-      <a href="${url}" target="_blank" rel="noopener" aria-label="${strings[label]} — ${title}">${strings[label]} ↗</a>
-    `).join('');
+    const footer = links
+      ? Object.entries(links).map(([label, url]) => `
+          <a href="${url}" target="_blank" rel="noopener" aria-label="${strings[label]} — ${title}">${strings[label]} ↗</a>
+        `).join('')
+      : `<span>${strings.unpublishedSource}</span>`;
+    const status = inDevelopment ? `<span class="proj-status">${strings.inDevelopment}</span>` : '';
 
     return `
       <article class="project-card">
-        <div class="proj-icon" aria-hidden="true">${icon}</div>
+        <div class="proj-header">
+          <div class="proj-icon" aria-hidden="true">${icon}</div>
+          ${status}
+        </div>
         <h4 class="proj-title">${title}</h4>
         <div class="proj-desc">${strings[key + 'Description']}</div>
         <div class="proj-tags">${tagsHTML}</div>
-        <div class="proj-links">${linksHTML}</div>
+        <div class="proj-links">${footer}</div>
       </article>
     `;
   }).join('');

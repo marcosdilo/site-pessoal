@@ -510,6 +510,22 @@ button.skill-tag {
   font-size: 1.35rem;
 }
 
+.proj-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.proj-status {
+  padding: .28rem .55rem;
+  border: 1px solid var(--grey-light);
+  border-radius: 999px;
+  color: var(--acento-light);
+  font-size: .68rem;
+}
+
 .proj-title {
   margin: 0;
   font: 700 1rem var(--f-deco);
@@ -547,6 +563,13 @@ button.skill-tag {
   flex-wrap: wrap;
   gap: .4rem .85rem;
   font-size: .73rem;
+  color: var(--muted);
+}
+
+.proj-links span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
 }
 
 .proj-links a {
